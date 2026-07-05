@@ -408,13 +408,13 @@ HERO
 
 #hero{
 
-    min-height:100vh;
+    min-height:92vh;
 
     display:flex;
 
     align-items:center;
 
-    padding-top:120px;
+    padding-top:80px;
 
 }
 
@@ -422,7 +422,11 @@ HERO
 
     display:grid;
 
-    grid-template-columns:1fr 560px;
+    grid-template-columns:
+
+        1fr
+
+        560px;
 
     gap:48px;
 
@@ -431,8 +435,10 @@ HERO
 }
 
 .hero-content{
-    margin-top:-20px;
+
     max-width:620px;
+
+    margin-top:-18px;
 
 }
 
@@ -462,7 +468,9 @@ HERO
 
     max-width:560px;
 
-    margin-bottom:42px;
+    margin-bottom:36px;
+
+    line-height:1.95;
 
 }
 
@@ -488,6 +496,8 @@ FOTO HERO
     display:flex;
 
     justify-content:center;
+
+    align-items:center;
 
 }
 
@@ -619,12 +629,44 @@ h2{
     height:470px;
 
 }
+.hero-background-decoration{
 
+    position:absolute;
+
+    width:540px;
+
+    height:540px;
+
+    border-radius:50%;
+
+    background:
+
+        radial-gradient(
+
+            circle,
+
+            rgba(203,189,174,.30),
+
+            rgba(203,189,174,0)
+
+        );
+
+    filter:blur(18px);
+
+    top:60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:-2;
+
+}
 .hero-arch-shadow{
 
-    width:320px;
-
-    height:470px;
+   position:absolute;
+   width:480px;
+   height:670px;
 
 }
 
