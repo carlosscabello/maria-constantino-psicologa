@@ -428,9 +428,9 @@ HERO
 
 .hero-content{
 
-    max-width:620px;
+    max-width:540px;
 
-    margin-top:-18px;
+    margin-top:-8px;
 
 }
 
@@ -457,13 +457,13 @@ HERO
 }
 
 .hero-content p{
-
     max-width:560px;
-
     margin-bottom:36px;
+    line-height:1.82;
+}
 
-    line-height:1.95;
-
+.hero-content h1{
+   line-height:1.12;
 }
 
 .hero-buttons{
@@ -482,15 +482,11 @@ FOTO HERO
 ======================================================= */
 
 .hero-image{
-
-    position:relative;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
+   position:relative;
+   display:flex;
+   justify-content:center;
+   align-items:center;
+   isolation:isolate;
 }
 
 .hero-arch-shadow{
