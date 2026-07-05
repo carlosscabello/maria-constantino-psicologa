@@ -248,28 +248,6 @@ menuLinks.forEach(link=>{
 
 
 /*=========================================================
-BOTÕES CTA
-=========================================================*/
-
-$$(".btn-primary").forEach(button=>{
-
-    button.addEventListener("mouseenter",()=>{
-
-        button.style.transform="translateY(-3px)";
-
-    });
-
-    button.addEventListener("mouseleave",()=>{
-
-        button.style.transform="";
-
-    });
-
-});
-
-
-
-/*=========================================================
 SCROLL TOP (estrutura)
 Será concluído na Parte 2
 =========================================================*/
