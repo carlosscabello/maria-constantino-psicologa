@@ -118,7 +118,7 @@
 
 <!-- ===================================================== -->
 
-<section id="hero" aria-labelledby="hero-title">
+<section id="hero">
 
     <div class="container hero-grid">
 
@@ -145,7 +145,7 @@
             </span>
 
 
-            <h1 id="hero-title">
+            <h1>
 
                 Um espaço seguro<br>
 
@@ -199,7 +199,7 @@
         
                 <img
                     src="assets/img/maria-hero.jpg"
-                    alt="Psicóloga clínica Maria Aparecida Constantino"
+                    alt="Maria Aparecida Constantino"
                     width="480"
                     height="670"
                     loading="eager"
@@ -220,8 +220,6 @@
 
 <!-- SOBRE -->
 
-<!-- ===================================================== -->
-<!-- SOBRE -->
 <!-- ===================================================== -->
 
 <section id="sobre">
@@ -555,7 +553,6 @@
 
 
 <!-- ===================================================== -->
-<!-- ===================================================== -->
 <!-- CONTATO -->
 <!-- ===================================================== -->
 
@@ -710,7 +707,7 @@
 
         <div class="contato-formulario">
 
-            <form>
+            <form id="contact-form" novalidate>
 
                 <div class="form-group">
 
@@ -724,8 +721,7 @@
                         id="nome"
                         type="text"
                         placeholder="Seu nome"
-                        novalidate
-                        autocomplete>
+                        autocomplete="name">
 
                 </div>
 
@@ -742,7 +738,8 @@
                     <input
                         id="email"
                         type="email"
-                        placeholder="seu@email.com">
+                        placeholder="seu@email.com"
+                        autocomplete="email">
 
                 </div>
 
@@ -759,7 +756,8 @@
                     <input
                         id="telefone"
                         type="tel"
-                        placeholder="(00) 00000-0000">
+                        placeholder="(00) 00000-0000"
+                        autocomplete="tel">
 
                 </div>
 
