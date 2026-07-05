@@ -514,7 +514,7 @@ e.preventDefault();
 
 window.open(
 
-"https://wa.me/5500000000000",
+"https://wa.me/5535992709819",
 
 "_blank"
 
