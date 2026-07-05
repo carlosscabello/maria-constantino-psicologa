@@ -91,11 +91,12 @@
             </ul>
 
         </nav>
-        <button class="menu-toggle">
+        <button class="menu-toggle"
+        aria-label="Abrir menu">
         
-            <span></span>
-            <span></span>
-            <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
         
         </button>
         <a href="#contato"
@@ -191,12 +192,16 @@
         <div class="hero-image">
 
             <div class="hero-arch-shadow"></div>
-
+            <div class="hero-background-decoration"></div>
             <div class="hero-arch">
 
                 <img
                     src="assets/img/maria-hero.jpg"
-                    alt="Maria Aparecida Constantino">
+                    alt="Maria Aparecida Constantino"
+                    fetchpriority="high"
+                    width="440"
+                    height="620"
+                    decoding="async">
 
             </div>
 
@@ -715,7 +720,9 @@
                     <input
                         id="nome"
                         type="text"
-                        placeholder="Seu nome">
+                        placeholder="Seu nome"
+                        novalidate
+                        autocomplete>
 
                 </div>
 
