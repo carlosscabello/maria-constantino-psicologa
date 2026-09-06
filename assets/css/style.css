@@ -473,43 +473,27 @@ HERO
 }
 
 .hero-content{
-
-    max-width:620px;
-
+    max-width:760px;
     margin-top:-18px;
-
 }
 
 .hero-label{
-
     display:inline-block;
-
-    margin-right:12px;
-
+    margin-right:8px;
     margin-bottom:16px;
-
-    padding:8px 16px;
-
+    padding:7px 14px;
     background:white;
-
     border-radius:999px;
-
     border:1px solid var(--border);
-
-    font-size:.82rem;
-
+    font-size:.76rem;
     color:var(--primary);
-
+    white-space:nowrap;
 }
 
 .hero-content p{
-
-    max-width:560px;
-
+    max-width:650px;
     margin-bottom:36px;
-
     line-height:1.95;
-
 }
 
 .hero-buttons{
