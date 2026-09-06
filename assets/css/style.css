@@ -479,11 +479,13 @@ HERO
 
 .hero-labels{
     display:flex;
+    flex-wrap:wrap;
     align-items:center;
     justify-content:flex-start;
-    gap:10px;
+    gap:12px;
     width:100%;
-    margin-bottom:24px;
+    margin-top:28px;
+    margin-bottom:30px;
 }
 
 .hero-label{
