@@ -613,53 +613,9 @@ h2{
 
 }
 
-.hero-arch{
 
-    width:320px;
 
-    height:470px;
 
-}
-.hero-background-decoration{
-
-    position:absolute;
-
-    width:540px;
-
-    height:540px;
-
-    border-radius:50%;
-
-    background:
-
-        radial-gradient(
-
-            circle,
-
-            rgba(203,189,174,.30),
-
-            rgba(203,189,174,0)
-
-        );
-
-    filter:blur(18px);
-
-    top:60px;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    z-index:-2;
-
-}
-.hero-arch-shadow{
-
-   position:absolute;
-   width:480px;
-   height:670px;
-
-}
 
 .menu{
 
@@ -1817,7 +1773,7 @@ img{
 
 }
 
-.hero-arch img,
+
 
 .sobre-card img{
 
@@ -1825,11 +1781,7 @@ img{
 
 }
 
-.hero-arch:hover img{
 
-    transform:scale(1.04);
-
-}
 
 .sobre-card:hover img{
 
@@ -1974,7 +1926,14 @@ h2{
     font-size:32px;
 
 }
+.hero-image{
+    justify-content:center;
+}
 
+.hero-photo{
+    max-width:520px;
+    border-radius:16px;
+}
 h3{
 
     font-size:24px;
@@ -2067,11 +2026,6 @@ MICROINTERAÇÕES
 
 .sobre-card,
 
-.hero-arch{
-
-    will-change:transform;
-
-}
 
 
 
