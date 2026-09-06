@@ -359,145 +359,74 @@ observer.observe(el);
 
 
 /*=========================================================
-FORMULÁRIO
+FORMULÁRIO → WHATSAPP
 =========================================================*/
 
 const form = $("#contact-form");
 
 if(form){
 
-form.addEventListener("submit",(e)=>{
+    form.addEventListener("submit",(e)=>{
 
-e.preventDefault();
+        e.preventDefault();
 
-let valid=true;
+        const nome = $("#nome");
+        const mensagem = $("#mensagem");
 
-
-
-const nome=$("#nome");
-
-const email=$("#email");
-
-const telefone=$("#telefone");
-
-const mensagem=$("#mensagem");
+        /* Limpa possíveis marcações anteriores */
+        [nome, mensagem].forEach(field=>{
+            field.style.borderColor="";
+        });
 
 
+        /* Validação do nome */
+        if(nome.value.trim().length < 3){
 
-[nome,email,telefone,mensagem]
+            nome.style.borderColor="#d35b5b";
+            nome.focus();
 
-.forEach(field=>{
-
-field.style.borderColor="";
-
-});
-
-
-
-if(nome.value.trim().length<3){
-
-nome.style.borderColor="#d35b5b";
-
-valid=false;
-
-}
+            return;
+        }
 
 
+        /* Validação da mensagem */
+        if(mensagem.value.trim().length < 10){
 
-const emailRegex=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            mensagem.style.borderColor="#d35b5b";
+            mensagem.focus();
 
-if(!emailRegex.test(email.value)){
-
-email.style.borderColor="#d35b5b";
-
-valid=false;
-
-}
+            return;
+        }
 
 
+        /* Monta a mensagem que será enviada pelo WhatsApp */
+        const texto = 
+`Olá, Maria Aparecida.
 
-if(telefone.value.replace(/\D/g,"").length<10){
+Meu nome é ${nome.value.trim()}.
 
-telefone.style.borderColor="#d35b5b";
-
-valid=false;
-
-}
-
+${mensagem.value.trim()}`;
 
 
-if(mensagem.value.trim().length<10){
+        /* Codifica corretamente acentos, espaços e quebras de linha */
+        const mensagemWhatsApp = encodeURIComponent(texto);
 
-mensagem.style.borderColor="#d35b5b";
 
-valid=false;
+        /* Link do WhatsApp da psicóloga */
+        const whatsappUrl =
+            `https://wa.me/5535992709819?text=${mensagemWhatsApp}`;
+
+
+        /* Abre a conversa no WhatsApp */
+        window.open(
+            whatsappUrl,
+            "_blank",
+            "noopener,noreferrer"
+        );
+
+    });
 
 }
-
-
-
-if(!valid){
-
-alert("Por favor, revise os campos do formulário.");
-
-return;
-
-}
-
-
-
-alert(
-
-"Sua mensagem foi preparada. Em breve ela poderá ser integrada a um serviço de envio."
-
-);
-
-form.reset();
-
-});
-
-}
-
-
-
-/*=========================================================
-MÁSCARA TELEFONE
-=========================================================*/
-
-const telefone=$("#telefone");
-
-if(telefone){
-
-telefone.addEventListener("input",(e)=>{
-
-let value=e.target.value
-
-.replace(/\D/g,"")
-
-.substring(0,11);
-
-value=value.replace(
-
-/(\d{2})(\d)/,
-
-"($1) $2"
-
-);
-
-value=value.replace(
-
-/(\d{5})(\d)/,
-
-"$1-$2"
-
-);
-
-e.target.value=value;
-
-});
-
-}
-
 
 
 /*=========================================================
