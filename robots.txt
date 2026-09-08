@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mariaaparecidaconstantino.com.br/sitemap.xml
