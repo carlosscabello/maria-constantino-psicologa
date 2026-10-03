@@ -704,9 +704,11 @@ RESPONSIVO
    .logo-title{
       font-size:17px;
       line-height:1.15;
+      white-space:normal;
    }   
    .logo-subtitle{
       font-size:.68rem;
+        line-height:1.3;
    }   
    .menu{
       display:none;
@@ -715,12 +717,17 @@ RESPONSIVO
       display:flex;
       flex-shrink:0;
    }   
-   .btn-header{
-      display:inline-flex;
-      padding:10px 14px;
-      font-size:.72rem;
-      line-height:1.2;
-   }
+   .header-container > .btn-primary{
+        flex-shrink:0;
+        padding:10px 14px;
+        font-size:.72rem;
+        line-height:1.2;
+    }
+    h1{
+        font-size:38px;
+        line-height:1.12;
+        margin-bottom:24px;
+    }
    h2{
         font-size:32px;
         line-height:1.15;
@@ -729,7 +736,6 @@ RESPONSIVO
     h3{
         font-size:22px;
         line-height:1.25;
-        margin-bottom:14px;
     }
     .section-label{
         font-size:.68rem;
@@ -742,15 +748,24 @@ RESPONSIVO
     .sobre-grid{
         grid-template-columns:1fr;
         gap:42px;
+        text-align:center;
+    }
+    .sobre-imagem{
+        width:100%;
     }
     .sobre-card{
-        max-width:330px;
+        width:100%;
+        max-width:340px;
         margin-inline:auto;
     }
     .sobre-card img{
-        height:410px;
+        width:100%;
+        height:auto;
+        aspect-ratio:4 / 5;
+        object-fit:cover;
     }
     .sobre-conteudo{
+        width:100%;
         max-width:700px;
         margin-inline:auto;
     }
@@ -768,19 +783,28 @@ RESPONSIVO
         font-size:.76rem;
     }
     .section-header{
-        margin-bottom:42px;
+        width:100%;
+        max-width:700px;
+        margin:0 auto 42px;
+    }
+    .section-header h2{
+        font-size:32px;
     }
     .section-header p{
         margin-top:14px;
+        line-height:1.7;
     }
     .ajuda-conteudo{
         width:100%;
+        max-width:700px;
+        margin-inline:auto;
     }
     .ajuda-bloco{
         padding:30px 0;
     }
     .ajuda-bloco h3{
         font-size:22px;
+        line-height:1.3;
     }
     .ajuda-bloco p{
         line-height:1.75;
@@ -791,6 +815,7 @@ RESPONSIVO
         margin-top:38px;
     }
     .abordagem-grid article{
+        width:100%;
         padding:32px 22px;
         border-radius:22px;
     }
@@ -803,9 +828,17 @@ RESPONSIVO
     .abordagem-grid h3{
         font-size:22px;
     }
+    .abordagem-grid p{
+        line-height:1.7;
+    }
     .contato-grid{
         grid-template-columns:1fr;
         gap:38px;
+    }
+    .contato-info{
+        width:100%;
+        max-width:700px;
+        margin-inline:auto;
     }
     .contato-info>p{
         max-width:100%;
@@ -823,6 +856,10 @@ RESPONSIVO
         height:46px;
         font-size:19px;
     }
+    .contato-item span{
+        font-size:.88rem;
+        line-height:1.5;
+    }
     .social-links{
         flex-direction:column;
         gap:8px;
@@ -834,7 +871,10 @@ RESPONSIVO
         font-size:.78rem;
     }
     .contato-formulario{
-        padding:24px 20px;
+        width:100%;
+        max-width:700px;
+        margin-inline:auto;
+        padding:28px 20px;
         border-radius:22px;
     }
     .form-group{
@@ -846,6 +886,7 @@ RESPONSIVO
     }
     .form-group input,
     .form-group textarea{
+        width:100%;
         padding:14px 15px;
         font-size:.88rem;
         border-radius:12px;
@@ -857,6 +898,7 @@ RESPONSIVO
         padding:72px 0;
     }
     .cta-box{
+        width:100%;
         padding:40px 22px;
         border-radius:24px;
     }
@@ -875,6 +917,15 @@ RESPONSIVO
         grid-template-columns:1fr;
         gap:28px;
         text-align:center;
+    }
+    .footer-brand,
+    .footer-menu,
+    .footer-copy{
+        width:100%;
+        text-align:center;
+    }
+    .footer-menu{
+        gap:12px;
     }
     .footer-copy{
         text-align:center;
