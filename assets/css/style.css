@@ -182,6 +182,7 @@ CONTAINER
 .container{
     width: calc(100% - 32px);
     max-width: 1180px;
+    margin-inline: auto;
 }
 
 section{
